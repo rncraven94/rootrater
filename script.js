@@ -11,9 +11,10 @@ const UserRoot = function (username) {
 generateUser.addEventListener("click", function (e) {
   e.preventDefault();
   // get value from the form
-  const usernameInput = document.getElementById("usernameInput").ariaValueMax;
+  const usernameInput = document.getElementById("usernameInput").value;
   const newUser = new UserRoot(usernameInput);
   userObjects[usernameInput] = newUser;
   console.log(userObjects[usernameInput]);
+  console.log(userObjects);
   // console.log();
 });
