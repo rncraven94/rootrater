@@ -1,6 +1,7 @@
 "use strict";
 
 const generateUser = document.getElementById("user-generate");
+const loginUser = document.getElementById("user-login");
 const userObjects = {};
 
 const UserRoot = function (username, password) {
@@ -21,5 +22,15 @@ generateUser.addEventListener("click", function (e) {
     userObjects[usernameInput] = newUser;
     console.log(userObjects[usernameInput]);
     console.log(userObjects);
+  }
+});
+
+loginUser.addEventListener("click", function (e) {
+  e.preventDefault();
+  const usernameInput = document.getElementById("usernameInputLogin");
+  if (userObjects === usernameInput) {
+    console.log(1);
+  } else {
+    console.log(0);
   }
 });
