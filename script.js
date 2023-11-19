@@ -27,10 +27,21 @@ generateUser.addEventListener("click", function (e) {
 
 loginUser.addEventListener("click", function (e) {
   e.preventDefault();
-  const usernameInput = document.getElementById("usernameInputLogin");
-  if (userObjects === usernameInput) {
-    console.log(1);
+  const usernameInput = document.getElementById("usernameInputLogin").value;
+  let foundUser = null;
+
+  for (const key in userObjects) {
+    if (userObjects.hasOwnProperty(key)) {
+      const user = userObjects[key];
+      if (user.username === usernameInput) {
+        foundUser = user;
+        break;
+      }
+    }
+  }
+  if (foundUser) {
+    console.log(`User found:`, foundUser);
   } else {
-    console.log(0);
+    console.log("User not found");
   }
 });
