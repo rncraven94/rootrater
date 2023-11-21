@@ -49,5 +49,7 @@ loginUser.addEventListener("click", function (e) {
 function maskPassword() {
   const passwordInput = document.getElementById("password");
   const maskedValue = passwordInput.value.replace(/./g, "*");
+  const originalPassword = passwordInput.value;
+  console.log(originalPassword);
   passwordInput.value = maskedValue;
 }
