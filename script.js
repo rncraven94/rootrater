@@ -45,3 +45,9 @@ loginUser.addEventListener("click", function (e) {
     console.log("User not found");
   }
 });
+
+function maskPassword() {
+  const passwordInput = document.getElementById("password");
+  const maskedValue = passwordInput.value.replace(/./g, "*");
+  passwordInput.value = maskedValue;
+}
